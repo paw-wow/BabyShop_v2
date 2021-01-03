@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+    <table>
+        <h1 style="margin-left: 50%">Каталог книг</h1>
+        {% for product in product_list %}
+            <tr>
+                <th>{{ product.title }}</th>
+            </tr>
+            <tr>
+                <td>{{ product.author }}</td>
+                <td>{{ product.page }} стр.</td>
+                <td>написана в {{ product.wtitten }} году</td>
+                <td>{% if product.img %} <img src="{{ MEDIA_URL }}{{ product.img.url }}" width="250px" , height="400px">
+                {% endif %}
+                <p><a href="{% url 'edit' product.pk %}">Изменить</a></p>
+                <p><a href="{% url 'delete' product.pk %}">Удалить</a></p>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Главная{% endblock %}</title>
+</head>
+<body>
+<header>
+    <h1>Книжный магазик</h1>
+    <h2><a href="/admin">Админка</a></h2>
+    <h2><a href="/">Главная</a></h2>
+    <section>
+        {% block content %}
+        {% endblock %}
+    </section>
+</header>
+
+</body>
+</html>
