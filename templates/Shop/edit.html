@@ -4,19 +4,19 @@
         {% csrf_token %}
         <p>
             <label>Введите название</label><br>
-            <input type="text" name="title" value="{{product.title}}" />
+            <input type="text" name="title" value="{{post.title}}" />
         </p>
         <p>
             <label>Введите автора</label><br>
-            <input type="text" name="content" value="{{product.author}}" />
+            <input type="text" name="author" value="{{post.author.fullname}}" />
         </p>
         <p>
             <label>Введите количество страниц</label><br>
-            <input type="text" name="content" value="{{product.page}}" />
+            <input type="text" name="page" value="{{post.page}}" />
         </p>
         <p>
-            <label>Введите дату написания</label><br>
-            <input type="text" name="content" value="{{product.wtitten}}" />
+            <label>Введите дату публикации</label><br>
+            <input type="text" name="wtitten" value="{{post.wtitten}}" />
         </p>
 
         <input type="submit" value="Сохранить" >
